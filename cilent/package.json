@@ -4,6 +4,7 @@
     "tailwindcss": "^3.4.17"
   },
   "dependencies": {
+    "motion": "^12.0.1",
     "swiper": "^11.2.1"
   }
 }
