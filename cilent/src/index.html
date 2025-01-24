@@ -6,7 +6,7 @@
     <link href="./output.css" rel="stylesheet" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- <script src="products.js"></script> -->
+    <script src="products.js"></script>
 
     <!-- Font awosome CDN -->
     <link
@@ -128,112 +128,15 @@
       <!-- product catagory -->
       <section class="p-9 mt-5">
         <h1 class="text-4xl font-bold text-center mt-3">Our Products</h1>
-        <div class="product-container grid grid-cols-3 gap-8 mt-3">
-          <!-- 1 -->
-          <div
-            class="card card-compact bg-base-100 shadow-xl hover:scale-105 transform duration-300 product-list"
-          >
-            <figure>
-              <img src="images/winter_collection.png" alt="Winter Collection" />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">Winter Collection</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions justify-end">
-                <a href="product.html"
-                  ><button class="btn btn-primary">Buy Now</button></a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- 2 -->
-          <div
-            class="card card-compact bg-base-100 shadow-xl hover:scale-105 transform duration-300 product-list"
-          >
-            <figure>
-              <img src="images/winter_collection.png" alt="Winter Collection" />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">Winter Collection</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions justify-end">
-                <a href="product.html"
-                  ><button class="btn btn-primary">Buy Now</button></a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- 3 -->
-          <div
-            class="card card-compact bg-base-100 shadow-xl hover:scale-105 transform duration-300"
-          >
-            <figure>
-              <img src="images/kids_fashion.png" alt="Kids Fashion" />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">Kids Fashion</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions justify-end">
-                <a href="product.html"
-                  ><button class="btn btn-primary">Buy Now</button></a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- 4 -->
-
-          <div
-            class="card card-compact bg-base-100 shadow-xl hover:scale-105 transform duration-300"
-          >
-            <figure>
-              <img src="images/new_arrival_02.jpg" alt="New Arrival" />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">New arrival!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions justify-end">
-                <a href="product.html"
-                  ><button class="btn btn-primary">Buy Now</button></a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- 5 -->
-          <div
-            class="card card-compact bg-base-100 shadow-xl hover:scale-105 transform duration-300"
-          >
-            <figure>
-              <img src="images/new_arrival_03.jpg" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions justify-end">
-                <a href="product.html"
-                  ><button class="btn btn-primary">Buy Now</button></a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- 6 -->
-          <div
-            class="card card-compact bg-base-100 shadow-xl hover:scale-105 transform duration-300"
-          >
-            <figure>
-              <img src="images/Patterned scarf.jpg" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">Patterned scarf</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions justify-end">
-                <a href="product.html"
-                  ><button class="btn btn-primary">Buy Now</button></a
-                >
-              </div>
-            </div>
-          </div>
+        <div
+          class="product-container grid grid-cols-3 gap-8 mt-3"
+          id="productContainer"
+        >
+          <!-- Dynamic content will be inserted here -->
         </div>
       </section>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="script.js"></script>
 
       <section>
         <div class="overflow-hidden">

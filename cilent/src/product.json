@@ -9,7 +9,7 @@
         "price": 20,
         "size": ["S", "M", "L", "XL"],
         "color": ["Black", "White", "Blue"],
-        "image": "images/mens_tshirt.jpg",
+        "image": "https://i.ibb.co.com/8zQp64n/new-arrival-03.jpg",
         "description": "A comfortable slim-fit T-shirt made with breathable cotton."
     },
     {
@@ -19,7 +19,7 @@
         "price": 45,
         "size": ["XS", "S", "M", "L"],
         "color": ["Red", "Pink", "Yellow"],
-        "image": "images/womens_dress.jpg",
+        "image": "https://i.ibb.co.com/6bnz7mM/new-arrival-02.jpg",
         "description": "A light and breezy floral summer dress perfect for warm days."
     },
     {
@@ -29,7 +29,7 @@
         "price": 30,
         "size": ["2-3Y", "3-4Y", "4-5Y"],
         "color": ["Green", "Yellow", "Blue"],
-        "image": "images/kids_hoodie.jpg",
+        "image": "https://i.ibb.co.com/rdsyJM5/Patterned-scarf.jpg",
         "description": "A cozy hoodie with fun cartoon prints for kids."
     },
     {
@@ -39,7 +39,7 @@
         "price": 50,
         "size": ["28", "30", "32", "34"],
         "color": ["Blue", "Black"],
-        "image": "images/mens_jeans.jpg",
+        "image": "https://i.ibb.co.com/6bnz7mM/new-arrival-02.jpg",
         "description": "Timeless denim jeans with a classic fit, made from durable fabric."
     },
     {
@@ -49,7 +49,7 @@
         "price": 60,
         "size": ["S", "M", "L"],
         "color": ["Beige", "Gray", "Brown"],
-        "image": "images/womens_cardigan.jpg",
+        "image": "https://i.ibb.co.com/8zQp64n/new-arrival-03.jpg",
         "description": "A soft and warm knitted cardigan, perfect for layering."
     },
     {
@@ -59,7 +59,20 @@
         "price": 25,
         "size": ["2-3Y", "4-5Y", "6-7Y"],
         "color": ["Pink", "Blue"],
-        "image": "images/kids_skirt.jpg",
+        "image": "https://i.ibb.co.com/6bnz7mM/new-arrival-02.jpg",
         "description": "A cute polka dot skirt with an elastic waistband for easy wear."
     }
 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
