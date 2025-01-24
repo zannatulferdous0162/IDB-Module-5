@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
+    <!-- Font awosome CDN -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Daisy UI -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
       rel="stylesheet"
@@ -25,66 +32,80 @@
       } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm";
     </script>
   </head>
-  <body>
+  <body class="">
     <header>
-      <div class="navbar bg-black text-white">
-        <div class="navbar-start">
-          <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </div>
-            <ul
-              tabindex="0"
-              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+      <!-- Navbar -->
+      <nav
+        class="flex items-center justify-between bg-white px-8 py-4 shadow-md"
+      >
+        <div class="text-2xl font-bold text-black">
+          Dar<span class="text-orange-600">z</span>BD
+        </div>
+
+        <ul
+          class="hidden md:flex items-center space-x-8 text-sm font-medium text-black"
+        >
+          <li class="relative group">
+            <a href="#" class="flex items-center">
+              Home
+              <i class="fa-solid fa-angle-down ml-1"></i>
+            </a>
+          </li>
+          <li class="relative group">
+            <a href="#" class="flex items-center">
+              Shop
+              <i class="fa-solid fa-angle-down ml-1"></i>
+            </a>
+          </li>
+          <li class="relative group">
+            <a href="#" class="flex items-center">
+              Products
+              <i class="fa-solid fa-angle-down ml-1"></i>
+            </a>
+          </li>
+          <li><a href="#" class="hover:text-gray-600">Pages</a></li>
+          <li><a href="#" class="hover:text-gray-600">Blog</a></li>
+          <li><a href="#" class="hover:text-gray-600 underline">Buy now</a></li>
+        </ul>
+
+        <!-- Icons -->
+        <div class="flex items-center space-x-4">
+          <a href="#" class="text-black hover:text-gray-600">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+          <a href="#" class="text-black hover:text-gray-600">
+            <i class="fa-solid fa-user"></i>
+          </a>
+          <a href="#" class="relative text-black hover:text-gray-600">
+            <i class="fa-solid fa-heart"></i>
+            <span
+              class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full px-1"
+              >0</span
             >
-              <li><a>Home</a></li>
-              <li><a>About</a></li>
-              <li><a>Contact</a></li>
-              <li>
-                <a>Products</a>
-              </li>
-            </ul>
-          </div>
-          <a class="btn btn-ghost text-xl">DarazBD</a>
+          </a>
+          <a href="#" class="relative text-black hover:text-gray-600">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span
+              class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full px-1"
+              >0</span
+            >
+          </a>
         </div>
-        <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal px-1">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/products">Products</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="navbar-end">
-          <a class="btn">Login</a>
-        </div>
-      </div>
+      </nav>
     </header>
 
     <main>
+      <!-- banner section -->
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img class="w-[1250px]" src="./images/banner_01.png" />
+            <img class="w-full mx-auto" src="./images/banner_01.png" />
           </div>
           <div class="swiper-slide">
-            <img class="w-[1250px]" src="./images/banner_02.png" />
+            <img class="w-full" src="./images/banner_02.png" />
           </div>
           <div class="swiper-slide">
-            <img class="w-[1250px]" src="./images/banner_03.png" />
+            <img class="w-full" src="./images/banner_04.png" />
           </div>
         </div>
         <div class="swiper-button-next"></div>
@@ -101,8 +122,9 @@
         });
       </script>
       <!-- product catagory -->
-      <section class="p-9">
-        <div class="product-container grid grid-cols-3 gap-8">
+      <section class="p-9 mt-5">
+        <h1 class="text-4xl font-bold text-center mt-3">Our Products</h1>
+        <div class="product-container grid grid-cols-3 gap-8 mt-3">
           <!-- 1 -->
           <div
             class="card card-compact bg-base-100 shadow-xl hover:scale-105 transform duration-300"
@@ -170,7 +192,7 @@
             class="card card-compact bg-base-100 shadow-xl hover:scale-105 transform duration-300"
           >
             <figure>
-              <img src="images/new_arrival.png" alt="New Arrival" />
+              <img src="images/new_arrival_02.jpg" alt="New Arrival" />
             </figure>
             <div class="card-body">
               <h2 class="card-title">New arrival!</h2>
@@ -185,10 +207,7 @@
             class="card card-compact bg-base-100 shadow-xl hover:scale-105 transform duration-300"
           >
             <figure>
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Shoes"
-              />
+              <img src="images/new_arrival_03.jpg" alt="Shoes" />
             </figure>
             <div class="card-body">
               <h2 class="card-title">Shoes!</h2>
@@ -203,13 +222,10 @@
             class="card card-compact bg-base-100 shadow-xl hover:scale-105 transform duration-300"
           >
             <figure>
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Shoes"
-              />
+              <img src="images/Patterned scarf.jpg" alt="Shoes" />
             </figure>
             <div class="card-body">
-              <h2 class="card-title">Shoes!</h2>
+              <h2 class="card-title">Patterned scarf</h2>
               <p>If a dog chews shoes whose shoes does he choose?</p>
               <div class="card-actions justify-end">
                 <button class="btn btn-primary">Buy Now</button>
@@ -227,7 +243,7 @@
               background: url(https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2019/12/home-new-bg-free-img.jpg);
             "
           >
-            <div class="p-8">
+            <div class="p-8 mb-4">
               <h1 class="text-5xl text-white font-bold my-4">
                 Raining Offers For <br />
                 Hot Summer!
@@ -237,6 +253,196 @@
                 <button class="btn">SHOP NOW</button>
                 <button class="btn hover:btn-outline">Find More</button>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- vedio  -->
+      <section class="mt-10">
+        <h2 class="text-3xl md:text-5xl font-bold text-black mt-6 text-center">
+          Raining Offers For
+        </h2>
+        <p
+          class="text-lg md:text-xl text-black mt-4 text-center font-semibold mb-4"
+        >
+          Grab your products
+        </p>
+
+        <div class="relative h-screen w-full mt-8">
+          <video
+            autoplay
+            muted
+            loop
+            class="absolute inset-0 h-full w-full object-cover"
+          >
+            <source src="images/slider-video-2.mp4" type="video/mp4" />
+            <!-- যদি ভিডিও লোড না হয় -->
+            Your browser does not support the video tag.
+          </video>
+
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+          <!-- Content -->
+          <div
+            class="relative flex flex-col items-center justify-center text-center text-white px-4 h-full"
+          >
+            <p class="text-lg md:text-xl font-medium tracking-wide uppercase">
+              FREE SHIPPING OVER ORDER $120
+            </p>
+            <h1 class="text-4xl md:text-6xl font-bold mt-4">
+              Spring Collection
+            </h1>
+            <p class="text-lg md:text-2xl mt-4 max-w-2xl">
+              Here is your chance to upgrade your wardrobe with a variation of
+              styles
+            </p>
+            <a
+              href="#shop"
+              class="mt-8 px-6 py-3 bg-white text-black font-medium text-lg rounded hover:bg-gray-200 transition"
+            >
+              Shop Now
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- visit our store -->
+
+      <section>
+        <!--  -->
+        <div class="container mx-auto py-12">
+          <!-- Tabs -->
+          <div class="flex justify-center space-x-8 border-b">
+            <button
+              class="tab-btn text-lg font-medium pb-2 border-b-2 border-transparent hover:border-black focus:border-black"
+              data-tab="hongkong"
+            >
+              Hongkong
+            </button>
+            <button
+              class="tab-btn text-lg font-medium pb-2 border-b-2 border-transparent hover:border-black focus:border-black"
+              data-tab="london"
+            >
+              London
+            </button>
+            <button
+              class="tab-btn text-lg font-medium pb-2 border-b-2 border-transparent hover:border-black focus:border-black"
+              data-tab="paris"
+            >
+              Paris
+            </button>
+          </div>
+
+          <!-- Content -->
+          <div class="mt-8">
+            <!-- Hongkong Tab Content -->
+            <div id="hongkong" class="tab-content">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h2 class="text-2xl font-semibold">Hongkong Store</h2>
+                  <p class="mt-4 text-gray-700">
+                    301 Front St W, Toronto <br />
+                    Ecomus@support.com <br />
+                    (08) 8942 1299
+                  </p>
+                  <p class="mt-4 text-gray-700">
+                    Mon - Fri, 8:30am – 10:30pm <br />
+                    Saturday, 8:30am – 10:30pm <br />
+                    Sunday Closed
+                  </p>
+                </div>
+                <div>
+                  <img
+                    src="https://via.placeholder.com/600x400"
+                    alt="Hongkong Store"
+                    class="rounded-lg shadow"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- London Tab Content -->
+            <div id="london" class="tab-content hidden">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h2 class="text-2xl font-semibold">London Store</h2>
+                  <p class="mt-4 text-gray-700">
+                    15 Baker Street, London <br />
+                    Ecomus@support.com <br />
+                    (08) 1234 5678
+                  </p>
+                  <p class="mt-4 text-gray-700">
+                    Mon - Fri, 9:00am – 9:00pm <br />
+                    Saturday, 10:00am – 8:00pm <br />
+                    Sunday Closed
+                  </p>
+                </div>
+                <div>
+                  <img
+                    src="https://via.placeholder.com/600x400"
+                    alt="London Store"
+                    class="rounded-lg shadow"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Paris Tab Content -->
+            <div id="paris" class="tab-content hidden">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h2 class="text-2xl font-semibold">Paris Store</h2>
+                  <p class="mt-4 text-gray-700">
+                    21 Rue La Boétie, Paris <br />
+                    Ecomus@support.com <br />
+                    (08) 8765 4321
+                  </p>
+                  <p class="mt-4 text-gray-700">
+                    Mon - Fri, 9:00am – 9:00pm <br />
+                    Saturday, 10:00am – 8:00pm <br />
+                    Sunday Closed
+                  </p>
+                </div>
+                <div>
+                  <img
+                    src="images/banner_04.png"
+                    alt="Paris Store"
+                    class="rounded-lg shadow"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <!-- text and pic -->
+        <div class="container mx-auto py-12">
+          <!-- Store Section -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 items-center gap-8 bg-white p-8 shadow rounded-lg"
+          >
+            <!-- Text Content -->
+            <div>
+              <h2 class="text-3xl font-semibold mb-4">Hongkong Store</h2>
+              <p class="text-gray-700 mb-2">
+                301 Front St W, Toronto<br />
+                Ecomus@support.com<br />
+                (08) 8942 1299
+              </p>
+              <p class="text-gray-700">
+                Mon - Fri, 8:30am – 10:30pm<br />
+                Saturday, 8:30am – 10:30pm<br />
+                Sunday Closed
+              </p>
+            </div>
+
+            <!-- Image Content -->
+            <div>
+              <img
+                src="images/ourstore.png"
+                alt="Store Image"
+                class="rounded-lg shadow"
+              />
             </div>
           </div>
         </div>
