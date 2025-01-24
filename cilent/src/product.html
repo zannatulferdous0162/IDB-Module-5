@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product List</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font awosome CDN -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav
+        class="flex items-center justify-between bg-white px-8 py-4 shadow-md"
+      >
+        <div class="text-2xl font-bold text-black">
+          Dar<span class="text-orange-600">z</span>BD
+        </div>
+
+        <ul
+          class="hidden md:flex items-center space-x-8 text-sm font-medium text-black"
+        >
+          <li class="relative group">
+            <a href="#" class="flex items-center">
+              Home
+              <i class="fa-solid fa-angle-down ml-1"></i>
+            </a>
+          </li>
+          <li class="relative group">
+            <a href="#" class="flex items-center">
+              Shop
+              <i class="fa-solid fa-angle-down ml-1"></i>
+            </a>
+          </li>
+          <li class="relative group">
+            <a href="#" class="flex items-center">
+              Products
+              <i class="fa-solid fa-angle-down ml-1"></i>
+            </a>
+          </li>
+          <li><a href="#" class="hover:text-gray-600">Pages</a></li>
+          <li><a href="#" class="hover:text-gray-600">Blog</a></li>
+          <li><a href="#" class="hover:text-gray-600 underline">Buy now</a></li>
+        </ul>
+
+        <!-- Icons -->
+        <div class="flex items-center space-x-4">
+          <a href="#" class="text-black hover:text-gray-600">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+          <a href="#" class="text-black hover:text-gray-600">
+            <i class="fa-solid fa-user"></i>
+          </a>
+          <a href="#" class="relative text-black hover:text-gray-600">
+            <i class="fa-solid fa-heart"></i>
+            <span
+              class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full px-1"
+              >0</span
+            >
+          </a>
+          <a href="#" class="relative text-black hover:text-gray-600">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span
+              class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full px-1"
+              >0</span
+            >
+          </a>
+        </div>
+      </nav>
+    </header>
+    <script>
+      $(document).ready(function () {
+        console.log("Hello World");
+      });
+    </script>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Product Image -->
+      <div>
+        <img
+          src="${product.image}"
+          alt="${product.name}"
+          class="w-full h-auto rounded-lg shadow"
+        />
+      </div>
+
+      <!-- Product Info -->
+      <div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">${product.name}</h2>
+        <p class="text-gray-600 text-sm mb-4">
+          Category:
+          <span class="font-medium text-gray-800">${product.category}</span>
+        </p>
+        <p class="text-lg font-semibold text-orange-600">$${product.price}</p>
+
+        <!-- Description -->
+        <p class="mt-4 text-gray-700">${product.description}</p>
+
+        <!-- Sizes -->
+        <div class="mt-4">
+          <h3 class="text-sm font-medium text-gray-800">Available Sizes:</h3>
+          <div class="flex space-x-2 mt-2">${sizesHtml}</div>
+        </div>
+
+        <!-- Colors -->
+        <div class="mt-4">
+          <h3 class="text-sm font-medium text-gray-800">Available Colors:</h3>
+          <div class="flex space-x-3 mt-2">${colorsHtml}</div>
+        </div>
+
+        <!-- Add to Cart Button -->
+        <button
+          class="mt-6 w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition"
+        >
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="products.js"></script> -->
+
     <!-- Font awosome CDN -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -127,38 +131,7 @@
         <div class="product-container grid grid-cols-3 gap-8 mt-3">
           <!-- 1 -->
           <div
-            class="card card-compact bg-base-100 shadow-xl hover:scale-105 transform duration-300"
-          >
-            <figure>
-              <img src="images/wedding_dress.png" alt="Wedding Dress" />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">Wedding Dress</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions justify-end">
-                <button
-                  class="btn btn-primary"
-                  onclick="my_modal_4.showModal()"
-                >
-                  Buy Now
-                </button>
-                <dialog id="my_modal_4" class="modal">
-                  <div class="modal-box w-11/12 max-w-5xl">
-                    <!-- contant  -->
-                    <div class="modal-action">
-                      <form method="dialog">
-                        <!-- if there is a button, it will close the modal -->
-                        <button class="btn">Close</button>
-                      </form>
-                    </div>
-                  </div>
-                </dialog>
-              </div>
-            </div>
-          </div>
-          <!-- 2 -->
-          <div
-            class="card card-compact bg-base-100 shadow-xl hover:scale-105 transform duration-300"
+            class="card card-compact bg-base-100 shadow-xl hover:scale-105 transform duration-300 product-list"
           >
             <figure>
               <img src="images/winter_collection.png" alt="Winter Collection" />
@@ -167,7 +140,26 @@
               <h2 class="card-title">Winter Collection</h2>
               <p>If a dog chews shoes whose shoes does he choose?</p>
               <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
+                <a href="product.html"
+                  ><button class="btn btn-primary">Buy Now</button></a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div
+            class="card card-compact bg-base-100 shadow-xl hover:scale-105 transform duration-300 product-list"
+          >
+            <figure>
+              <img src="images/winter_collection.png" alt="Winter Collection" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Winter Collection</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end">
+                <a href="product.html"
+                  ><button class="btn btn-primary">Buy Now</button></a
+                >
               </div>
             </div>
           </div>
@@ -182,7 +174,9 @@
               <h2 class="card-title">Kids Fashion</h2>
               <p>If a dog chews shoes whose shoes does he choose?</p>
               <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
+                <a href="product.html"
+                  ><button class="btn btn-primary">Buy Now</button></a
+                >
               </div>
             </div>
           </div>
@@ -198,7 +192,9 @@
               <h2 class="card-title">New arrival!</h2>
               <p>If a dog chews shoes whose shoes does he choose?</p>
               <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
+                <a href="product.html"
+                  ><button class="btn btn-primary">Buy Now</button></a
+                >
               </div>
             </div>
           </div>
@@ -213,7 +209,9 @@
               <h2 class="card-title">Shoes!</h2>
               <p>If a dog chews shoes whose shoes does he choose?</p>
               <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
+                <a href="product.html"
+                  ><button class="btn btn-primary">Buy Now</button></a
+                >
               </div>
             </div>
           </div>
@@ -228,7 +226,9 @@
               <h2 class="card-title">Patterned scarf</h2>
               <p>If a dog chews shoes whose shoes does he choose?</p>
               <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
+                <a href="product.html"
+                  ><button class="btn btn-primary">Buy Now</button></a
+                >
               </div>
             </div>
           </div>
