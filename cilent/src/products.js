@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <p class="text-gray-600 mt-2"><strong>Price:</strong> $${product.price}</p>
             <div class="mt-4">
               <button class="bg-blue-500 text-white px-4 py-2 rounded">
-                Buy Now
+                Add to cart
               </button>
             </div>
           </div>
