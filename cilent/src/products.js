@@ -104,10 +104,12 @@ document.addEventListener("DOMContentLoaded", () => {
         <p class="text-gray-600 mt-2">${product.description}</p>
         <p class="text-gray-600 mt-2"><strong>Price:</strong> $${product.price}</p>
         <div class="mt-4">
-          <button onClick='addToCart(${JSON.stringify(product)})' class="bg-blue-500 text-white px-4 py-2 rounded">
-            Add to cart
-          </button>
-        </div>
+  <a href="./checkout.html">
+    <button onClick='addToCart(${JSON.stringify(product)})' class="bg-blue-500 text-white px-4 py-2 rounded">
+      Add to cart
+    </button>
+  </a>
+</div>
           </div>
         </div>
       `;

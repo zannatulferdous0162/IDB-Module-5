@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="max-w-4xl mx-auto my-10 bg-white p-8 shadow-md rounded">
+      <h2 class="text-2xl font-bold mb-4">Checkout</h2>
+
+      <!-- কার্টের প্রোডাক্ট দেখানোর জন্য এই ডিভ -->
+      <div id="cart-items" class="mb-6"></div>
+
+      <!-- মোট দাম -->
+      <h3 class="text-xl font-bold mb-4">
+        Total: <span id="total-price">$0</span>
+      </h3>
+
+      <!-- ইউজার ইনফরমেশন ফর্ম -->
+      <form id="checkout-form">
+        <label class="block mb-2 font-bold">Full Name:</label>
+        <input
+          type="text"
+          id="name"
+          class="w-full p-2 border rounded mb-4"
+          required
+        />
+
+        <label class="block mb-2 font-bold">Phone Number:</label>
+        <input
+          type="tel"
+          id="phone"
+          class="w-full p-2 border rounded mb-4"
+          required
+        />
+
+        <label class="block mb-2 font-bold">Address:</label>
+        <textarea
+          id="address"
+          class="w-full p-2 border rounded mb-4"
+          required
+        ></textarea>
+
+        <label class="block mb-2 font-bold">Payment Method:</label>
+        <select id="payment" class="w-full p-2 border rounded mb-4">
+          <option value="Cash on Delivery">Cash on Delivery</option>
+          <option value="Credit Card">Credit Card</option>
+          <option value="Bkash">Bkash</option>
+        </select>
+
+        <!-- Place Order Button -->
+        <button
+          id="placeOrderButton"
+          type="submit"
+          class="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
+        >
+          Place Order
+        </button>
+
+        <script>
+          document
+            .getElementById("placeOrderButton")
+            .addEventListener("click", function (event) {
+              event.preventDefault(); // Prevent the default form submission
+              window.location.href = "./order-success.html"; // Redirect to order-success.html
+            });
+        </script>
+      </form>
+    </div>
+    <!--  -->
+
+    <div id="cartContainer"></div>
+
+    <script src="checkout.js"></script>
+  </body>
+</html>
