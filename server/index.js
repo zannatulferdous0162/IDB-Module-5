@@ -1,7 +1,4 @@
 const express = require('express')
-
-const router = express.Router();
-const Order = require("../models/Order"); // Order Model
 const cors = require('cors')
 const mongoose = require('mongoose')
 const productRouter = require('./router/productRouter')
@@ -27,20 +24,6 @@ app.get('/', (req, res) => {
   res.send('server')
 })
 
-// Order Post API (অর্ডার সংরক্ষণ করবে)
-router.post("/orders", async (req, res) => {
-    try {
-        const { userId, cartItems, totalPrice, paymentMethod, address, phone, status } = req.body;
-        const newOrder = new Order({ userId, cartItems, totalPrice, paymentMethod, address, phone, status });
-
-        await newOrder.save();
-        res.status(201).json(newOrder);
-    } catch (error) {
-        res.status(500).json({ error: "Error saving order" });
-    }
-});
-
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
-module.exports = router;

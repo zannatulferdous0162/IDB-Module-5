@@ -65,7 +65,51 @@
         </div>
       </nav>
     </header>
+
     <section id="show-cart"></section>
     <script src="./products.js"></script>
+    <script>
+      function fetchCart() {
+        const cartUrl = `http://localhost:3000/api/cart`;
+
+        fetch(cartUrl)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+          })
+          .then((cartItems) => {
+            const cartContainer = document.getElementById("cart-container");
+            cartContainer.innerHTML = ""; // আগের সব ডাটা মুছে ফেলা হবে
+
+            if (!cartItems || cartItems.length === 0) {
+              cartContainer.innerHTML = "<p>আপনার কার্ট খালি আছে।</p>";
+              return;
+            }
+
+            cartItems.forEach((item) => {
+              const cartItem = document.createElement("div");
+              cartItem.className = "cart-item";
+
+              cartItem.innerHTML = `
+          <img src="${item.image}" alt="${item.productName}" class="w-24 h-24">
+          <h3>${item.productName}</h3>
+          <p>Price: $${item.price}</p>
+          <button class="bg-red-500 text-white py-2 px-4 rounded" onclick='deleteCartItem("${item._id}")'>ডিলিট</button>
+        `;
+
+              cartContainer.appendChild(cartItem);
+            });
+          })
+          .catch((error) => {
+            console.error("কার্ট ডেটা লোড করার সময় সমস্যা হয়েছে:", error);
+          });
+      }
+
+      document.getElementById("cart-icon").addEventListener("click", () => {
+        fetchCart(); // কার্টের তথ্য লোড করুন
+      });
+    </script>
   </body>
 </html>
